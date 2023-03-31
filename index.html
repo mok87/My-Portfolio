@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+   <div id="header">
+    <div class="container">
+        <nav>
+            
+            <h2 class="logo">Mokhtar Ouidah</h2>
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Junior Web Developer</p>
+            <h1> <span>Hello its me </span><br> Mokhtar Ouidah  </h1>
+        </div>
+    </div>
+   </div>
+  <!-------------about-------------------->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>my introduction</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentap('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentap('experience')">experience</p>
+                    <p class="tab-links" onclick="opentap('education')">education</p>
+                </div>
+                <div class="tap-conents active-tap" id="skills">
+                    <ul>
+                        <li><span>UI</span><br>Designing Web</li>
+                        <li><span>Web Developer</span><br> app Developer</li>
+                        <li><span>App Developer</span><br>Building Web</li>
+                    </ul>
+                </div>
+                <div class="tap-conents" id="experience">
+                    <ul>
+                        <li><span>2022 - current</span><br> Web Developer</li>
+                    </ul>
+                </div>
+                <div class="tap-conents" id="education">
+                    <ul>
+                        <li><span>2022</span><br>Full stack developer Training at full stack developer Amazon carrer</li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!-------------services-------------------->
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title">my services</h1>
+        <div class="services-list">
+
+        </div>
+
+    </div>
+
+   </div>
+
+   <script>
+    
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentap(tapname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tap");
+        }
+        event.currentTarget.classlist.add("active-link");
+    }
+   </script>
+    
+</body>
+</html>
