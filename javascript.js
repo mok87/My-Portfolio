@@ -1,13 +1,20 @@
-<Script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+const form = document.querySelector("#form")
+const submitButton = document.querySelector("#submit")
+const scriptURL = 'https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec'
 
-    function opentap(tapname){
-        for(tablink of tablinks){
-            tablink.classlist.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classlist.remove("active-tap");
-        }
+form.addEventListener('submit', e => {
+  submitButton.disabled = true
+  e.preventDefault()
+  let requestBody = new FormData(form)
+  fetch(scriptURL, { method: 'POST', body: requestBody})
+    .then(response => {
+       alert('Success!', response)
+       submitButton.disabled = false
+      })
+    .catch(error => {
+    alert('Error!', error.message)
+      submitButton.disabled = false
+
     }
-</Script>
+    )
+})
