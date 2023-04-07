@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/1422ceb0ff.js" crossorigin="anonymous"></script>
 </head>
 <body>
    <div id="header">
@@ -37,16 +38,16 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>my introduction</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, sit placeat! Aut nisi vel commodi, blanditiis cumque voluptate impedit ut incidunt. Esse numquam eos minus iusto perspiciatis rem quis adipisci.</p>
                 <div class="tab-title">
-                    <p class="tab-links active-link" onclick="opentap('skills')">Skills</p>
+                    <p class="tab-links active-link" onclick="opentap('skills')">skills</p>
                     <p class="tab-links" onclick="opentap('experience')">experience</p>
                     <p class="tab-links" onclick="opentap('education')">education</p>
                 </div>
                 <div class="tap-conents active-tap" id="skills">
                     <ul>
                         <li><span>UI</span><br>Designing Web</li>
-                        <li><span>Web Developer</span><br> app Developer</li>
+                        <li><span>Web Developer</span><br> App Developer</li>
                         <li><span>App Developer</span><br>Building Web</li>
                     </ul>
                 </div>
@@ -67,14 +68,101 @@
    <!-------------services-------------------->
    <div id="services">
     <div class="container">
-        <h1 class="sub-title">my services</h1>
+        <h1 class="sub-title">My Services</h1>
         <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ea ut deleniti ratione labore repudiandae vitae deserunt aperiam laborum molestiae aut explicabo ex molestias atque quibusdam nihil, iusto recusandae. Iusto!</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-crop"></i>
+                <h2>UI</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ea ut deleniti ratione labore repudiandae vitae deserunt aperiam laborum molestiae aut explicabo ex molestias atque quibusdam nihil, iusto recusandae. Iusto!</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, ea ut deleniti ratione labore repudiandae vitae deserunt aperiam laborum molestiae aut explicabo ex molestias atque quibusdam nihil, iusto recusandae. Iusto!</p>
+                <a href="#">Learn More</a>
+            </div>
 
         </div>
 
     </div>
 
    </div>
+   
+  <!-------------portfolio------------>
+  <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png" >
+                <div class="layer">
+                    <h3>Social media app</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta repellat.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png" >
+                <div class="layer">
+                    <h3>Music app</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta repellat.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png" >
+                <div class="layer">
+                    <h3>Online Shopping app</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta repellat.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+      </div>
+</div>
+<!-------------contact-------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i> contact@example.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> 00132929299</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twiter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+               </div>
+               <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © made with <i class="fa-solid fa-heart"></i> by Mokhtar </p>
+    </div>
+</div>
+
+
+
+
+
 
    <script>
     
@@ -83,12 +171,13 @@
 
     function opentap(tapname){
         for(tablink of tablinks){
-            tablink.classlist.remove("active-link");
+            tablink.classList.remove("active-link");
         }
         for(tabcontent of tabcontents){
-            tabcontent.classlist.remove("active-tap");
+            tabcontent.classList.remove("active-tap");
         }
-        event.currentTarget.classlist.add("active-link");
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tapname).classList.add("active-tap");
     }
    </script>
     
